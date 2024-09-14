@@ -1,0 +1,12 @@
+<div class="container">
+    <h2>Egg Drop Problem Example</h2>
+    <label for="eggs">Number of Eggs:</label>
+    <input type="number" id="eggs" [(ngModel)]="eggs" (input)="onInputChange($event)">
+  
+    <label for="floors">Number of Floors:</label>
+    <input type="number" id="floors" [(ngModel)]="floors" (input)="onInputChange($event)">
+  
+    <button (click)="eggDrop()">Calculate Minimum Drops</button>
+  
+    <p>Minimum drops required: {{ drops() }}</p>
+  </div>
