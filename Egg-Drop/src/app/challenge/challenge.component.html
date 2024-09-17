@@ -1,1 +1,28 @@
-<p>challenge works!</p>
+<div class="egg-dropping-explanation">
+    <h2>Egg Drop Problem Solution Steps</h2>
+    <ol>
+      <li><strong>Create a DP Table:</strong> Initialize a 2D table to store the minimum number of attempts for given numbers of eggs and floors.</li>
+      <li><strong>Initialize Base Cases:</strong>
+        <ul>
+          <li>With <strong>one egg</strong>, the minimum attempts equal the number of floors.</li>
+          <li>With <strong>one floor</strong>, only <strong>one attempt</strong> is needed regardless of the number of eggs.</li>
+        </ul>
+      </li>
+      <li><strong>Fill the DP Table:</strong>
+        <p>For each egg count from 2 to <em>e</em> and floor count from 2 to <em>f</em>:</p>
+        <ul>
+          <li>For each possible dropping floor <em>k</em> from 1 to <em>f</em>:
+            <ul>
+              <li>Calculate attempts using:<br>
+                <code>attempts = 1 + max(attempts if egg breaks, attempts if egg doesn't break)</code>
+              </li>
+            </ul>
+          </li>
+          <li>Choose the minimum attempts among all <em>k</em>.</li>
+        </ul>
+      </li>
+      <li><strong>Retrieve the Solution:</strong> The value in the DP table for the given number of eggs and floors is the minimum number of attempts needed.</li>
+      <li><strong>Implement and Test:</strong> Translate this logic into code and verify with test cases.</li>
+    </ol>
+    <strong>For more information, refer to the <a href="https://github.com/Angular-Coding-Challenges/Egg-Drop/blob/main/Egg-Drop/src/app/challenge/README.md" target="_blank">README.md</a> file.</strong>
+  </div>
